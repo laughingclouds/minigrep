@@ -72,11 +72,7 @@ mod tests {
     #[test]
     fn case_sensitive() {
         let query = "smart";
-        let contents = concat!(
-            "Hemant:\n",
-            "handsome, smart, batman\n",
-            "Pick three."
-        );
+        let contents = concat!("Hemant:\n", "handsome, smart, batman\n", "Pick three.");
 
         assert_eq!(vec!["handsome, smart, batman"], search(query, contents));
     }
@@ -91,9 +87,6 @@ mod tests {
             "Worship me."
         );
 
-        assert_eq!(
-            vec!["Hemant:"],
-            search_case_insensitive(query, contents)
-        );
+        assert_eq!(vec!["Hemant:"], search_case_insensitive(query, contents));
     }
 }
